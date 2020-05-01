@@ -9,7 +9,6 @@
 
 import NativeInterface from './internal/nativeInterface';
 import {ImagePickerOptions, ImagePickerResponse} from './internal/types';
-import {processColor} from 'react-native';
 
 const DEFAULT_OPTIONS: ImagePickerOptions = {
   title: 'Select a Photo',
@@ -25,7 +24,6 @@ const DEFAULT_OPTIONS: ImagePickerOptions = {
     reTryTitle: 're-try',
     okTitle: "I'm sure",
   },
-  tintColor: '',
 };
 
 type Callback = (response: ImagePickerResponse) => void;
@@ -41,10 +39,7 @@ class ImagePicker {
   ): void {
     if (typeof optionsOrCallback === 'function') {
       return NativeInterface.showImagePicker(
-        {
-          ...DEFAULT_OPTIONS,
-          tintColor: processColor(DEFAULT_OPTIONS.tintColor),
-        },
+        DEFAULT_OPTIONS,
         optionsOrCallback,
       );
     }
@@ -54,35 +49,21 @@ class ImagePicker {
     }
 
     return NativeInterface.showImagePicker(
-      {
-        ...DEFAULT_OPTIONS,
-        ...optionsOrCallback,
-        tintColor: processColor(
-          optionsOrCallback.tintColor || DEFAULT_OPTIONS.tintColor,
-        ),
-      },
+      {...DEFAULT_OPTIONS, ...optionsOrCallback},
       callback,
     );
   }
 
   launchCamera(options: ImagePickerOptions, callback: Callback): void {
     return NativeInterface.launchCamera(
-      {
-        ...DEFAULT_OPTIONS,
-        ...options,
-        tintColor: processColor(options.tintColor || DEFAULT_OPTIONS.tintColor),
-      },
+      {...DEFAULT_OPTIONS, ...options},
       callback,
     );
   }
 
   launchImageLibrary(options: ImagePickerOptions, callback: Callback): void {
     return NativeInterface.launchImageLibrary(
-      {
-        ...DEFAULT_OPTIONS,
-        ...options,
-        tintColor: processColor(options.tintColor || DEFAULT_OPTIONS.tintColor),
-      },
+      {...DEFAULT_OPTIONS, ...options},
       callback,
     );
   }

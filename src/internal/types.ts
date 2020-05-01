@@ -36,7 +36,6 @@ export interface ImagePickerOptions {
   cancelButtonTitle?: string;
   takePhotoButtonTitle?: string;
   chooseFromLibraryButtonTitle?: string;
-  chooseWhichLibraryTitle?: string;
   customButtons?: ImagePickerCustomButtonOptions[];
   cameraType?: 'front' | 'back';
   mediaType?: 'photo' | 'video' | 'mixed';
@@ -50,7 +49,6 @@ export interface ImagePickerOptions {
   noData?: boolean;
   storageOptions?: ImagePickerStorageOptions;
   permissionDenied?: ImagePickerPermissionDeniedOptions;
-  tintColor?: number | string;
 }
 
 export interface ImagePickerStorageOptions {
@@ -58,7 +56,6 @@ export interface ImagePickerStorageOptions {
   path?: string;
   cameraRoll?: boolean;
   waitUntilSaved?: boolean;
-  privateDirectory?: boolean;
 }
 
 export interface ImagePickerPermissionDeniedOptions {

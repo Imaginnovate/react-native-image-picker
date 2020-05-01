@@ -8,11 +8,6 @@
 
 A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera, like so:
 
-🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
-
-🚧🚧🚧🚧[Help & Input Wanted](https://github.com/react-native-community/react-native-image-picker/issues/1358) 🚧🚧🚧🚧
-
-🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
 | iOS                                                                                                                   | Android                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | <img title="iOS" src="https://github.com/react-community/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/react-community/react-native-image-picker/blob/master/images/android-image.png"> |
@@ -22,11 +17,9 @@ A React Native module that allows you to use native UI to select a photo/video f
 This library started as a basic bridge of the native iOS image picker, and I want to keep it that way. As such, functionality beyond what the native `UIImagePickerController` supports will not be supported here. **Multiple image selection, more control over the crop tool, and landscape support** are things missing from the native iOS functionality - **not issues with my library**. If you need these things, [react-native-image-crop-picker](https://github.com/ivpusic/react-native-image-crop-picker) might be a better choice for you.
 
 ## React Native Compatibility
-To use this library you need to ensure you match up with the correct version of React Native you are using.
+To use this library you need to ensure you are using the correct version of React Native. If you are using a version of React Native that is lower than `0.57` you will need to upgrade that before attempting to use this library.
 
-p.s. React Native introduced AndroidX support in 0.60, which is a **breaking change** for most libraries (incl. this one) using native Android functionality.
-
-| `@react-native-community/imagepicker` version | Required React Native Version                                                     |
+| `@react-native-community/netinfo` version | Required React Native Version                                                     |
 | ----------------------------------------- | --------------------------------------------------------------------------------- |
 | `1.x.x`                                   | `>= 0.60` or `>= 0.59` if using [Jetifier](https://github.com/mikehardy/jetifier) |
 | `0.x.x`                                   | `<= 0.59`                                                                         |
@@ -36,11 +29,6 @@ p.s. React Native introduced AndroidX support in 0.60, which is a **breaking cha
 
 ```
 yarn add react-native-image-picker
-
-# RN >= 0.60
-cd ios && pod install
-
-# RN < 0.60
 react-native link react-native-image-picker
 ```
 
