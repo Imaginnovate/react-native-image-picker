@@ -20,9 +20,9 @@ const DEFAULT_OPTIONS: ImagePickerOptions = {
   permissionDenied: {
     title: 'Permission denied',
     text:
-      'To be able to take pictures with your camera and choose images from your library.',
-    reTryTitle: 're-try',
-    okTitle: "I'm sure",
+      'Please enable Camera/Gallery permission from settings to accessing this feature.',
+    reTryTitle: 'Ok',
+    okTitle: 'Cancel',
   },
 };
 
