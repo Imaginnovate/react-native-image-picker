@@ -18,7 +18,7 @@ const DEFAULT_OPTIONS: ImagePickerOptions = {
   quality: 1.0,
   allowsEditing: false,
   permissionDenied: {
-    title: 'Permission denied',
+    title: 'Panda',
     text:
       'Please enable Camera/Gallery permission from settings to accessing this feature.',
     reTryTitle: 'Ok',
